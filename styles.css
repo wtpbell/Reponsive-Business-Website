@@ -1,0 +1,650 @@
+
+
+/* universal */
+html {
+    font-size: 18px;
+    color: #001c10;
+}
+
+* {
+    box-sizing: border-box;
+    max-width:100%;
+} 
+
+body {
+    background-color: #FED13C;
+    margin: 0px; 
+    max-width:100%;
+}
+
+h1, h2, h3, h4 {
+    font-family:'Kanit', sans-serif;
+    text-align: center;
+    color: #001c10;
+    line-height: 1rem;
+}
+
+p, li{
+    font-family: 'Martel Sans', sans-serif;
+    text-align: justify;
+    line-height: 2.8rem;
+}
+
+a:link {
+    text-decoration: none;
+    color: #001c10;
+}
+
+a:link:hover {
+    cursor: pointer;
+    color:#123315;
+    text-decoration: underline;
+}
+
+.button {
+    border-radius: 1rem;
+    background: rgb(13,37,16);
+    color: #ffffff;
+    font-size: 1.3rem;
+    padding: 0.6rem 0.4rem;
+    width: 9rem;
+    text-align: center;
+    margin: 1rem;
+    font-family: "Maitree", sans-serif;
+    cursor: pointer;
+    box-shadow: 0.125rem 0.125rem 0.25rem #123315;
+}
+
+.button:hover {
+    background: rgb(5, 14, 6);
+    background: linear-gradient(90deg,rgb(13, 36, 16) 0%, rgb(33, 93, 41) 100%);
+}
+
+.button:active {
+    transform: translate(0em, 0.2em);
+   }
+
+.hamburger-menu:hover {
+    background: rgba(254, 209, 60, 0.8);
+}
+
+.hamburger-menu:active {
+    transform: translate(0em, 0.2em);
+   }
+
+#navigator {
+    position: fixed;
+    background-color: rgb(242, 242, 242);
+    max-width: 100%;
+    z-index: 20;
+}
+
+.desktop {
+    max-width: 100%;
+}
+
+.separator {
+    display: grid;
+    grid-template-columns: repeat(11, 1fr);
+    position: relative;
+    z-index: 10;
+    margin: -2rem auto 0;
+}
+
+.second-separator {
+    display: grid;
+    grid-template-columns: repeat(11, 1fr);
+    position: relative;
+    z-index: 10;
+    margin: 0 auto -4rem;
+}
+
+#stamp {
+    grid-column: 6 / span2;
+    object-fit: cover;
+    border-radius: 50%;
+    height: 9.375rem;
+    width: 9.375rem;
+}
+
+footer {
+    font-family: 'Martel Sans', sans-serif;
+    background-color: #8a7c0f ;
+    height: 20rem;
+    width: 100%;
+    color: #ffffff;
+}
+
+.hamburger-menu {
+    display: none;
+}
+
+/* Header  */
+
+#navigator .logo img{
+    width: 25%;
+    height: auto;
+    padding: 0.5rem;
+}
+
+.desktop .logo{
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.desktop li {
+    display: inline-block;
+    text-transform: uppercase;
+    margin-right: 1.4rem;
+    font-size : clamp(0.8rem, 2vw, 3rem);
+}
+
+
+
+
+/* Banner */
+
+.mission{
+    position: relative;
+    top: 2rem;
+}
+
+.mission .kitty-loaf {
+    background-image: url("./Resources/Banner-resize.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 50rem;
+    max-width: 100%;
+}
+
+.banner #statement {
+    font-size: 2.5rem;
+    padding-top: 10rem;
+}
+
+/* Product categories */
+
+.products-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    align-items: center; 
+    width: 100%;
+    margin: 0 auto;
+}
+
+.table-row {
+    display:inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 95%;
+}
+
+.row-item {
+    display: flex;
+    height: auto;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    margin: 6rem 2rem;
+}
+
+.row-item .product-image {
+    max-width: 100%;
+    height: 100%;
+}
+
+.row-item #text-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 30rem;
+}
+
+.row-item #text-box h2{
+    font-size : clamp(2rem, 3.4vw, 3rem);
+    margin: 0.8rem auto
+}
+
+.row-item #text-box p{
+    font-size : clamp(1.2rem, 2vw, 2.5rem);
+}
+
+/* Footer */
+
+.footer {
+    display: flex;
+    flex-flow: column;
+    background-color: #8a7c0f;
+    justify-content: center;
+    margin: auto 1.5rem;
+}
+
+.footer-container{
+    display: flex;
+    height: 15rem;
+    max-width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 2rem;
+    margin-bottom: 1.8rem;
+}
+
+
+.footer .subscription h3{
+    text-align: left;
+    color: #ffffff;
+    font-weight: 400;
+    font-size: 1.7rem;
+    line-height: 2.5rem;
+}
+
+.footer .subscription p{
+    text-align: left;
+    font-size: clamp(0.5rem 1vw 2rem);
+}
+
+#footer-navigator table{
+    width: 100%;
+    font-size: 1.3rem;
+    margin-top: 2.5rem;
+}
+
+.footer-tags td{
+    padding-right: 1rem;
+    text-decoration: none;
+}
+
+td:hover {
+    text-decoration: underline;
+}
+
+
+.underline {
+    border-bottom: 0.08rem solid #ffffff;
+}
+
+.copyright {
+    text-align: left;
+    font-size: 1.1rem;
+}
+
+@media only screen and (max-width:1048px) {
+    .desktop li {
+        margin-right: 1.1rem;
+        /* font-size: 1.3rem; */
+    }
+
+    #stamp {
+        height: 8rem;
+        width: 8rem;
+    }
+
+    .button {
+        font-size: 1.1rem;
+        width: 7rem;
+        text-align: center;
+        margin: 0.3rem;
+    }
+
+    /* Product categories */
+
+    .row-item {
+        display: flex;
+        height: auto;
+        flex: 1;
+        justify-content: center;
+        align-items: center;
+        margin: 2rem 1rem 4rem;
+    }
+
+    .row-item #text-box {
+        height:auto;
+    }
+
+    .row-item #text-box h2{
+        margin: 0.8rem auto;
+    }
+
+    .row-item #text-box p{
+        line-height: 1.7rem;
+        
+    }
+
+    footer {
+        height: 18rem;
+
+    }
+
+    .footer-container{
+        height: 14rem;
+        padding-top: 2.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .footer .subscription h3{
+        line-height: 1.5;
+        font-size: 1.5rem;
+        margin-bottom: 0.6rem;
+    }
+    
+    .footer .subscription .email{
+        margin: 0 auto 0.8rem;
+    }
+    
+    #footer-navigator table {
+        max-width: auto;
+        font-size: 1.1rem;
+        margin-top: 2.5rem;
+    }
+
+    .footer-tags td{
+        padding-right: 0.8rem;
+    }
+
+    .copyright {
+        font-size: 1rem;;
+    }
+}
+
+@media only screen and (max-width:768px) {
+    .desktop li {
+        margin-right: 0.5rem;
+        /* font-size: 1rem; */
+    }
+
+    .banner #statement {
+        font-size: 1.7rem;
+        padding-top: 7rem;
+    }
+
+    .mission .kitty-loaf {
+        height: 35rem;
+    }
+
+    .container #reverse-row {
+        flex-direction: column-reverse;
+    }
+
+    .table-row {
+        flex-direction: column;
+    }
+    
+    .row-item {
+        margin: 1rem 0;
+    }
+    
+    .row-item .product-image {
+        margin-top: 1.5rem;
+    }
+    
+    .row-item #text-box {
+        max-width: 80%;
+        height: auto;
+    }
+
+    .row-item #text-box p {
+        margin: 1rem auto ;
+        line-height: 2.2rem;
+    }
+
+    .separator {
+        grid-template-columns: repeat(12, 1fr);
+        margin: -1.5rem auto 0;
+    }
+    
+    .second-separator {
+        grid-template-columns: repeat(12, 1fr);
+        margin: 0 auto -3.5rem;
+    }
+    
+    #stamp {
+        grid-column:  6/ span2;
+        width: 7rem;
+        height: 7rem;
+    }
+
+    .button {
+        font-size: 1.2rem;
+        width: 8rem;
+        margin-bottom: 3rem;
+    }
+
+    footer {
+        height: 14rem;
+    }
+
+    .footer {
+        margin: auto 1.25rem;
+    }
+    
+    .footer-container{
+        height: 5rem;
+        margin: 4rem 0 3rem;
+        padding: 0;
+        justify-content: space-between;
+    }
+
+    .footer .subscription h3{
+        line-height: 1.2;
+        font-size: 1.3rem;
+        margin-bottom: 0.6rem;
+    }
+
+    .footer .subscription .email{
+        /* font-size: 1rem; */
+        padding: 0;
+        margin: 0 auto 0.8rem;
+    }
+
+    #footer-navigator table {
+        font-size: 0.9rem;
+        margin-top: 2.5rem;
+    }
+
+    .copyright {
+        font-size: 0.8rem;
+
+    }
+}
+
+
+
+@media only screen and (max-width: 648px) {
+    #navigator .logo img{
+        width: 35%;
+    }
+
+    #tags {
+        display: none;
+    }
+
+    .hamburger-menu{
+        display: block;
+        margin-right: 1.5rem;
+    }
+
+    .line {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 2rem;
+        height: 0.2rem;
+        background-color: black;
+        margin: 0.3rem;
+        padding: 0 0.5rem;
+        border-radius: 0.8rem;
+    }
+
+    .banner #statement {
+        font-size: 1.3rem;
+        padding-top: 5rem;
+    }
+
+    .mission .kitty-loaf {
+        height: 25rem;
+    }
+    
+    .row-item {
+        margin: 0.3rem 0 0;
+    }
+    
+    .row-item .product-image {
+        margin: 1.2rem auto 0.6rem;
+    }
+
+    .row-item #text-box h2{
+        margin: 0.8rem auto 0.3rem;
+    }
+    .row-item #text-box p {
+        margin-bottom: 0.3rem;
+        line-height: 1.5rem;
+    }
+
+    .separator {
+        grid-template-columns: repeat(11, 1fr);
+        margin: 0 auto;
+    }
+    
+    .second-separator {
+        grid-template-columns: repeat(11, 1fr);
+        margin: 1rem auto -2.5rem;
+    }
+    
+    #stamp {
+        grid-column: 6/ span2;
+        width: 5rem;
+        height: 5rem;
+    }
+
+    .button {
+        font-size: 0.8rem;
+        width: 5rem;
+        padding: 0.4rem 0.3rem;
+        margin: 0.5rem auto 2rem;
+    }
+
+    footer {
+        height: 14rem;
+    }
+
+    .footer {
+        margin: auto 1.25rem 2rem;
+    }
+
+    .footer-container{
+        margin: 3.5rem 0 3rem;
+    }
+    
+    .footer .subscription h3{
+        line-height: 1.2;
+        margin-bottom: 0.2rem;
+    }
+    
+    .footer .subscription .email{
+        margin: 0 auto auto 0.3rem;
+    }
+
+    #footer-navigator table {
+        font-size: 0.8rem;
+        margin-top: 2.5rem;
+        line-height: 1rem;
+    }
+
+    .copyright {
+        font-size: 0.6rem;
+    }
+
+}
+
+
+@media only screen and (max-width: 449px) {
+    #navigator .logo img{
+        width: 40%;
+    }
+
+    .hamburger-menu{
+        display: block;
+        margin-right: 0.8rem;
+        cursor: pointer;
+        /* text-decoration: none; */
+    }
+
+    
+
+
+    .banner #statement {
+        font-size: 0.8rem;
+        padding-top: 3.5rem;
+    }
+
+    .mission .kitty-loaf {
+        height: 20rem;
+    }
+    
+    .row-item {
+        margin: 0.3rem 0;
+    }
+    
+
+    .separator {
+        grid-template-columns: repeat(12, 1fr);
+    }
+    
+    .second-separator {
+        grid-template-columns: repeat(12, 1fr);
+        margin: 1rem auto -2rem;
+    }
+    
+    #stamp {
+        grid-column: 6/ span2;
+        width: 4rem;
+        height: 4rem;
+    }
+
+
+    #footer-navigator {
+        display: none;
+    }
+
+    footer {
+        height: 12rem;
+    }
+
+    .footer {
+        margin: auto 2rem 2rem;
+    }
+
+    .footer-container{
+        margin: 2.6rem 0 3rem;
+    }
+    
+    .footer .subscription h3{
+        line-height: 1.2;
+        font-size: 1.2rem;
+        margin-bottom: 0.2rem;
+    }
+    
+    .footer .subscription .email{
+        /* font-size: 0.8rem; */
+        margin: 0 auto auto 0.1rem;
+    }
+
+    .copyright {
+        font-size: 0.6rem;
+    }
+
+}
